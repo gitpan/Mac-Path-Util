@@ -1,5 +1,19 @@
-# $Id: Makefile.PL,v 1.5 2003/05/12 02:58:46 petdance Exp $
+# $Id: Makefile.PL,v 1.6 2004/09/02 22:22:51 comdog Exp $
 use ExtUtils::MakeMaker;
+	
+eval "use Test::Manifest";
+
+unless( $@ )
+	{
+	* ExtUtils::MM_Any::test_via_harness = sub
+		{
+		my($self, $perl, $tests) = @_;
+		
+		return qq|\t$perl "-MTest::Manifest" | .
+			qq|"-e" "run_t_manifest(\$(TEST_VERBOSE), '\$(INST_LIB)', | .
+			qq|'\$(INST_ARCHLIB)')"\n|;
+		}
+	}
 	
 WriteMakefile(
     'NAME'	    => 'Mac::Path::Util',
@@ -12,9 +26,6 @@ WriteMakefile(
     'PREREQ_PM' => {
 	'Test::Data'        => '0',
 	'Test::More'        => '0',
-	'File::Find'	    => '0',
-	'File::Spec'	    => '0',
-	'base'		    => '0',
     },
 
     'MAN3PODS'		=> {

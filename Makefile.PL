@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.2 2002/11/26 19:38:45 comdog Exp $
+# $Id: Makefile.PL,v 1.3 2002/11/27 03:58:28 comdog Exp $
 use ExtUtils::MakeMaker;
 	
 sub ExtUtils::MM_Any::test_via_harness
@@ -31,5 +31,5 @@ WriteMakefile(
 		'lib/Util.pm'    => '$(INST_MAN3DIR)/Mac::Path::Util.3',
 		},
 		    	
-	clean => { FILES => 'Mac-Path-Util' },
+	clean => { FILES => 'Mac-Path-Util-*' },
 	);

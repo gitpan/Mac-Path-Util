@@ -1,4 +1,4 @@
-# $Id: get_startup.t,v 1.3 2002/11/26 19:57:51 comdog Exp $
+# $Id: get_startup.t,v 1.4 2002/11/27 03:53:17 comdog Exp $
 
 use Test::More tests => 2;
 
@@ -7,6 +7,7 @@ use Mac::Path::Util;
 my $Startup = Mac::Path::Util::STARTUP;
 
 my $util = Mac::Path::Util->new();
+$util->use_applescript(0);
 isa_ok( $util, 'Mac::Path::Util' );
 
 my $startup = $util->_get_startup;

@@ -1,4 +1,4 @@
-# $Id: get_startup.t,v 1.5 2003/05/12 04:39:42 petdance Exp $
+# $Id: get_startup.t,v 1.6 2005/03/12 05:12:45 comdog Exp $
 
 use Test::More tests => 2;
 
@@ -11,7 +11,7 @@ $util->use_carbon(0);
 isa_ok( $util, 'Mac::Path::Util' );
 
 my $startup = $util->_get_startup;
-is( $startup, $Startup, '_get_startup returns right name' );
+is( $startup, $Startup, "_get_startup returns right name [$startup]" );
 
 $util->use_carbon(1);
 $util->clear_startup;

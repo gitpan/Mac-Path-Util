@@ -1,4 +1,4 @@
-# $Id: Util.pm,v 1.9 2004/09/02 22:56:16 comdog Exp $
+# $Id: Util.pm,v 1.11 2005/03/12 05:15:22 comdog Exp $
 package Mac::Path::Util;
 use strict;
 
@@ -12,7 +12,7 @@ use Exporter;
 %EXPORT_TAGS = (
 	'system' => [ qw(DARWIN MACOS) ],
 	);
-$VERSION = 0.11;
+$VERSION = 0.21;
 
 my $Startup;
 
@@ -314,6 +314,7 @@ sub _get_startup
 		if( $self->{use_carbon} and eval { require MacPerl } )
 			{
 			(my $volume = scalar MacPerl::Volumes()) =~ s/^.+?:(.+)$/$1/;
+			$volume;
 			}
 		else
 			{

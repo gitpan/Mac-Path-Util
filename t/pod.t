@@ -1,4 +1,4 @@
-# $Id: pod.t,v 1.1 2002/08/31 22:17:26 comdog Exp $
+# $Id: pod.t,v 1.1 2002/09/22 19:21:27 comdog Exp $
 
 BEGIN {
 	use File::Find::Rule;

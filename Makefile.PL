@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.9 2002/09/20 22:54:37 comdog Exp $
+# $Id: Makefile.PL,v 1.1 2002/09/22 19:21:27 comdog Exp $
 use ExtUtils::MakeMaker;
 
 my $tests = do {
@@ -8,7 +8,7 @@ my $tests = do {
 	
 WriteMakefile(
     'NAME'		    => 'Mac::Path::Util',
-	'VERSION'       => '0.05',
+	'VERSION'       => '0.05_02',
 	
     'PM'            => {
      	'lib/Util.pm'         => '$(INST_LIBDIR)/Util.pm',

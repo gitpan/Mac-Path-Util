@@ -1,4 +1,4 @@
-# $Id$
+# $Id: Util.pm,v 1.1 2002/09/22 19:21:27 comdog Exp $
 package Mac::Path::Util;
 use strict;
 
@@ -72,7 +72,7 @@ The optional anonymous hash can have these values:
 
 	type      DARWIN or MACOS (explicitly state which sort of path
                  with these symbolic constants)
-	startup   the name of the startup volume (if not defined, uses
+	startup   the name of the startup volume (if not defined, tries to use
                  the startup volume on the local machine)
 
 =cut
@@ -273,15 +273,11 @@ sub _get_startup
 
 	return unless eval { require Mac::AppleScript };
 
-	my $script = <<"SCRIPT";
-tell application "Finder"
-	set myDisks to every disk where startup is true
-	return name of item 1 of myDisks
-end tell
-SCRIPT
+	my $script = "return path to startup disk as string";
 
 	my $volume = Mac::AppleScript::RunAppleScript( $script );
 	$volume =~ s/^"|"$//g;
+	$volume =~ s/:$//g;
 
 	#print STDERR "I think the startup volume is [$volume]\n";
 
@@ -297,23 +293,9 @@ sub _is_startup
 
 	$name =~ s/"/\\"/g;
 
-	return unless eval { require Mac::AppleScript };
-
-	my $script = <<"SCRIPT";
-tell application "Finder"
-	set myTry to "$name"
-	set myDisks to every disk where startup is true
-	set myName to name of item 1 of myDisks
-	return myTry is myName
-end tell
-SCRIPT
-
-	my $volume = Mac::AppleScript::RunAppleScript( $script );
-	$volume =~ s/^"|"$//g;
-
-	#print STDERR "I think the startup volume is [$volume]\n";
-
-	return $volume;
+	$self->_get_startup unless defined $self->startup;
+	
+	$name eq $Startup ? TRUE : FALSE;
 	}
 
 =back

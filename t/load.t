@@ -1,4 +1,4 @@
-# $Id: load.t,v 1.2 2002/09/01 12:13:50 comdog Exp $
+# $Id: load.t,v 1.1 2002/09/22 19:21:27 comdog Exp $
 
 BEGIN {
 	use File::Find::Rule;

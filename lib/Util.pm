@@ -1,4 +1,4 @@
-# $Id: Util.pm,v 1.4 2002/11/27 03:53:17 comdog Exp $
+# $Id: Util.pm,v 1.5 2002/12/02 02:54:17 comdog Exp $
 package Mac::Path::Util;
 use strict;
 
@@ -12,7 +12,7 @@ use Exporter;
 %EXPORT_TAGS = (
 	'system' => [ qw(DARWIN MACOS) ],
 	);
-$VERSION = 0.07;
+$VERSION = 0.08;
 
 my $Startup;
 
@@ -245,7 +245,7 @@ sub _darwin2mac
 			my $abs = $volume . $path;
 			}
 		};
-	
+
 	return $self->{mac_path};
 	}
 
@@ -353,7 +353,7 @@ This source is part of a SourceForge project which always has the
 latest sources in CVS, as well as all of the previous releases.
 
 	https://sourceforge.net/projects/brian-d-foy/
-	
+
 If, for some reason, I disappear from the world, one of the other
 members of the project can shepherd this module appropriately.
 

@@ -1,4 +1,4 @@
-# $Id: Util.pm,v 1.12 2006/04/06 15:58:32 comdog Exp $
+# $Id: Util.pm,v 1.14 2006/06/08 06:06:42 comdog Exp $
 package Mac::Path::Util;
 use strict;
 
@@ -12,7 +12,7 @@ use Exporter;
 %EXPORT_TAGS = (
 	'system' => [ qw(DARWIN MACOS) ],
 	);
-$VERSION = 0.22;
+$VERSION = 0.23;
 
 my $Startup;
 
@@ -357,7 +357,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT
 
-Copyright 2002-2004, brian d foy, All rights reserved
+Copyright 2002-2006, brian d foy, All rights reserved
 
 You may use this package under the same terms as Perl itself
 

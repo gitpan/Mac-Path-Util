@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.7 2006/06/08 05:59:43 comdog Exp $
+# $Id: Makefile.PL,v 1.8 2007/01/10 04:30:11 comdog Exp $
 use ExtUtils::MakeMaker;
 	
 eval "use Test::Manifest 1.14";
@@ -6,6 +6,7 @@ eval "use Test::Manifest 1.14";
 WriteMakefile(
     'NAME'	        => 'Mac::Path::Util',
     'VERSION_FROM'  => 'lib/Util.pm',
+	'LICENSE'       => 'perl',
 	
     'PM'        => {
 	    'lib/Util.pm'         => '$(INST_LIBDIR)/Util.pm',

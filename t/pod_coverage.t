@@ -1,4 +1,4 @@
-# $Id: pod_coverage.t,v 1.1 2005/03/12 05:14:11 comdog Exp $
+# $Id: pod_coverage.t 2494 2008-01-16 11:30:24Z comdog $
 
 use Test::More;
 eval "use Test::Pod::Coverage";
@@ -11,5 +11,5 @@ else
 	{
 	plan tests => 1;
 
-	pod_coverage_ok( "Mac::Path::Util" );      
+	pod_coverage_ok( "Mac::Path::Util" );
 	}

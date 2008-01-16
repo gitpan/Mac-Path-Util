@@ -1,4 +1,4 @@
-# $Id: get_startup.t,v 1.6 2005/03/12 05:12:45 comdog Exp $
+# $Id: get_startup.t 1615 2005-03-12 05:12:45Z comdog $
 
 use Test::More tests => 2;
 

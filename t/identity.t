@@ -1,4 +1,4 @@
-# $Id: identity.t,v 1.2 2002/11/26 19:38:05 comdog Exp $
+# $Id: identity.t 619 2002-11-26 19:38:05Z comdog $
 
 use Test::More tests => 8;
 

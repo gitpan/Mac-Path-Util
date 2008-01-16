@@ -1,6 +1,9 @@
-# $Id: Util.pm,v 1.15 2007/01/10 04:30:11 comdog Exp $
+# $Id: Util.pm 2496 2008-01-16 11:40:33Z comdog $
 package Mac::Path::Util;
 use strict;
+
+use warnings;
+no warnings;
 
 use base qw(Exporter);
 use vars qw(@EXPORT_OK %EXPORT_TAGS $VERSION);
@@ -12,7 +15,7 @@ use Exporter;
 %EXPORT_TAGS = (
 	'system' => [ qw(DARWIN MACOS) ],
 	);
-$VERSION = 0.24;
+$VERSION = '0.25';
 
 my $Startup;
 
@@ -344,7 +347,7 @@ sub _is_startup
 =head1 SOURCE AVAILABILITY
 
 This source is part of a SourceForge project which always has the
-latest sources in CVS, as well as all of the previous releases.
+latest sources in SVN, as well as all of the previous releases.
 
 	http://sourceforge.net/projects/brian-d-foy/
 
@@ -357,7 +360,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2002-2007 brian d foy.  All rights reserved.
+Copyright (c) 2002-2008 brian d foy.  All rights reserved.
 
 This program is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.

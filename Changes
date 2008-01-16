@@ -1,4 +1,7 @@
-# $Id: Changes,v 1.12 2007/01/10 04:30:50 comdog Exp $
+# $Id: Changes 2498 2008-01-16 11:43:55Z comdog $
+
+0.25 - Wed Jan 16 05:44:17 2008
+	* Cleanups for the move from CVS to SVN. No need to upgrade.
 
 0.24 - Tue Jan  9 22:30:57 2007
 	* updated copyright and license info

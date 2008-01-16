@@ -1,13 +1,18 @@
-# $Id: Makefile.PL,v 1.8 2007/01/10 04:30:11 comdog Exp $
+# $Id: Makefile.PL 2495 2008-01-16 11:38:45Z comdog $
 use ExtUtils::MakeMaker;
-	
+
+require 5.006;
+
 eval "use Test::Manifest 1.14";
-	
+
 WriteMakefile(
-    'NAME'	        => 'Mac::Path::Util',
-    'VERSION_FROM'  => 'lib/Util.pm',
-	'LICENSE'       => 'perl',
-	
+    'NAME'	       => 'Mac::Path::Util',
+ 	'ABSTRACT'     => 'convert between darwin and Mac paths',
+   'VERSION_FROM'  => 'lib/Util.pm',
+	'LICENSE'      => 'perl',
+	'AUTHOR'       => 'brian d foy <bdfoy@cpan.org>',
+
+
     'PM'        => {
 	    'lib/Util.pm'         => '$(INST_LIBDIR)/Util.pm',
 		},
@@ -20,6 +25,6 @@ WriteMakefile(
     'MAN3PODS'  => {
 		'lib/Util.pm'    => '$(INST_MAN3DIR)/Mac::Path::Util.3',
 		},
-	    	
+
     clean => { FILES => 'Mac-Path-Util-*' },
 );

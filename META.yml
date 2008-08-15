@@ -1,11 +1,11 @@
 --- #YAML:1.0
 name:                Mac-Path-Util
-version:             0.25
+version:             0.26
 abstract:            convert between darwin and Mac paths
 license:             perl
 author:              
     - brian d foy <bdfoy@cpan.org>
-generated_by:        ExtUtils::MakeMaker version 6.42
+generated_by:        ExtUtils::MakeMaker version 6.44
 distribution_type:   module
 requires:     
     Test::Data:                    0

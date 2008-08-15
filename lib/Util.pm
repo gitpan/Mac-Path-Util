@@ -1,4 +1,4 @@
-# $Id: Util.pm 2496 2008-01-16 11:40:33Z comdog $
+# $Id: Util.pm 2666 2008-08-15 14:33:04Z comdog $
 package Mac::Path::Util;
 use strict;
 
@@ -15,7 +15,7 @@ use Exporter;
 %EXPORT_TAGS = (
 	'system' => [ qw(DARWIN MACOS) ],
 	);
-$VERSION = '0.25';
+$VERSION = '0.26';
 
 my $Startup;
 
